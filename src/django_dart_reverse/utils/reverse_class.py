@@ -19,7 +19,7 @@ class Reverse:
         self.param_identifier = self.__get_param_identifier()
 
     def __get_params(self, pattern: URLPattern) -> List[str]:
-        regex = '<[a-z_]*:[a-z_]*>'
+        regex = '<[a-zA-Z_]*:[a-zA-Z_]*>'
         return [param.split(':')[1].replace('>', '') for param in re.findall(regex, str(pattern.pattern))]
 
     def __get_path(self, pattern: URLPattern) -> str:
