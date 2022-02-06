@@ -1,6 +1,8 @@
 venv/
 db.sqlite3
-
+.idea
+.idea/
+.idea/*
 __pycahce__/
 
 # Django #
