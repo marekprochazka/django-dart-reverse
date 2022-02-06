@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_dart_reverse',
+    'django_dart_reverse.apps.DjangoDartReverseConfig',
     'testapp'
 ]
 
