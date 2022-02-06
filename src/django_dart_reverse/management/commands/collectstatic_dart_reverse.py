@@ -9,14 +9,6 @@ class Command(BaseCommand):
     requires_system_checks = False
 
     def handle(self, *args, **kwargs):
-        print('yooo')
-        collect_urls(get_resolver().url_patterns)
-        # for value in collect_urls(get_resolver().url_patterns):
-        #     print(value)
+        for value in collect_urls(get_resolver().url_patterns):
+            print(value.name)
 
-        # print(loader.render_to_string('dart/dart_file.tpl', {
-        #     'urls': [{'name': 'igor', 'params': ['jo'], 'path': 'jo/%{jo}'}],
-        #     'identifiers': {
-        #         'IGOR':'igor'
-        #     }
-        # }))
