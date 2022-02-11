@@ -126,3 +126,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DART_REVERSE_PATH = os.path.join(BASE_DIR, '../')
+

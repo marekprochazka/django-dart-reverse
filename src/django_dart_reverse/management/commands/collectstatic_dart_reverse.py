@@ -37,7 +37,10 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs) -> None:
         location = self.__get_location()
         urls = self.__get_urls()
-        content = loader.render_to_string('dart/dart_file.tpl', dict(urls=urls, throw_exception=False))
+        throw_exception = getattr(settings, 'DART_REVERSE_THROW_EXCEPTION', False)
+        throw_warning = getattr(settings, 'DART_REVERSE_THROW_WARNING', True)
+        content = loader.render_to_string('dart/dart_file.tpl',
+                                          dict(urls=urls, throw_exception=throw_exception, throw_warning=throw_warning))
         file = 'reverse.dart'
 
         fs = FileSystemStorage(location=location)

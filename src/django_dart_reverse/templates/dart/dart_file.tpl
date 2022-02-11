@@ -19,8 +19,10 @@ String? reverse(String name, [Map? params]) {
     {% if not throw_exception %}
     }
     on InvalidReverseParamsException {
+        {% if throw_warning %}
         print('Warning: Reverse parameters were named incorrectly.');
         print(params);
+        {% endif %}
     }
     {% endif %}
     }
