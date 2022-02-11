@@ -18,11 +18,7 @@ class Command(BaseCommand):
     help = 'Creates .dart file with reverse dictionary'
     requires_system_checks = False
 
-    def __validate_template_dirs(self) -> bool:
-        for dr in settings.TEMPLATES[0]['DIRS']:
-            if '../templates' in dr:
-                return True
-        return False
+
 
     def __get_location(self) -> str:
         output_path = getattr(settings, 'DART_REVERSE_PATH')
@@ -42,10 +38,7 @@ class Command(BaseCommand):
         return urls
 
     def handle(self, *args, **kwargs) -> None:
-        if not self.__validate_template_dirs():
-            raise ImproperlyConfigured(
-                'Improperly configured templates. Visit https://github.com/marekprochazka/django-dart-reverse for more details.'
-            )
+
         location = self.__get_location()
         urls = self.__get_urls()
         throw_exception = getattr(settings, 'DART_REVERSE_THROW_EXCEPTION', False)
