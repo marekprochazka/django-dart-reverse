@@ -5,6 +5,8 @@ db.sqlite3
 .idea/*
 __pycahce__/
 
+reverse.dart
+
 # Django #
 *.log
 *.pot
