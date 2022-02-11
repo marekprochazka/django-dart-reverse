@@ -1,1 +1,1 @@
-xcopy /e /Y src\django_dart_reverse django-dart-reverse
+xcopy /e /Y src\django_dart_reverse django-dart-reverse\django_dart_reverse
