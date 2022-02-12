@@ -4,7 +4,7 @@ db.sqlite3
 .idea/
 .idea/*
 __pycahce__/
-
+build/
 reverse.dart
 
 # Django #
