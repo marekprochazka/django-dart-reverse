@@ -14,7 +14,7 @@ def read(*parts):
 
 setup(
     name='django-dart-reverse',
-    version='0.0.3',
+    version='0.0.5',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
@@ -33,7 +33,7 @@ setup(
     download_url='',
     packages=find_packages(),
     package_data={
-        'django_js_reverse': [
+        'django_dart_reverse': [
             'templates/dart/*',
         ]
     },
