@@ -14,7 +14,7 @@ def read(*parts):
 
 setup(
     name='django-dart-reverse',
-    version='0.0.5',
+    version='0.0.11',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
@@ -25,12 +25,12 @@ setup(
     ],
     license='MIT',
     description='Url collect command for dart',
-    # long_description=read('../README.md') + '\n\n' + read('../CHANGELOG.md'),
-    # long_description_content_type='text/markdown',
+    long_description=read('../README.md'),
+    long_description_content_type='text/markdown',
     author='Marek Procházka',
     author_email='m.prochazka2002@gmail.com',
     url='https://github.com/marekprochazka/django-dart-reverse',
-    download_url='',
+    download_url='https://pypi.org/project/django-dart-reverse/',
     packages=find_packages(),
     package_data={
         'django_dart_reverse': [
