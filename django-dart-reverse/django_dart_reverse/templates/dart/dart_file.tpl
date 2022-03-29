@@ -7,7 +7,7 @@ String? reverse(String name, [Map? params]) {
     {% for url in urls %}
     {
     'name':'{{url.name}}',
-    'url':(Map? params)=> {% if url.num_params > 0 %}{% for param in url.params %}(params?["{{param}}"] != null) &&{% endfor %} true ?{% endif %} '{{url.path}}'{% if url.num_params > 0 %}: throw new InvalidReverseParamsException(){% endif %},
+    'url':(Map? params)=> {% if url.num_params > 0 %}{% for param in url.params %}(params?['{{param}}'] != null) &&{% endfor %} true ?{% endif %} '{{url.path}}'{% if url.num_params > 0 %}: throw InvalidReverseParamsException(){% endif %},
     'num_params':{{url.num_params}}},
     {% endfor %} ];
     for (var value in data) {
