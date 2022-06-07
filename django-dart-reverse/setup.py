@@ -14,7 +14,7 @@ def read(*parts):
 
 setup(
     name='django-dart-reverse',
-    version='0.0.13',
+    version='0.0.14',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
